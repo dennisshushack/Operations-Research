@@ -38,7 +38,6 @@ opt_model.setObjective(obj_fn, GRB.MAXIMIZE)
 
 # Normal Problem
 opt_model.optimize()
-opt_model.write('linear_model.lp')
 print("\n #### Solution Primal ####")
 print(f'Optimal objective function Value: {opt_model.objVal}')
 for v in opt_model.getVars():
@@ -65,7 +64,8 @@ if opt_model.objVal <= sum:
 print("\n### Sensitivity Analyis ###")
 print("Sensitivity Analysis of the Objective Function")
 print(
-    "X=Final Value, RC = Reduced Cost, OBJ = Coefficient,Allowable Increase = SAObjup-OBj, Allowable Decrease = Obj - SAObjLow "
+    "X=Final Value, RC = Reduced Cost, OBJ = Coefficient,Allowable Increase = SAObjup-OBj, Allowable Decrease = Obj - "
+    "SAObjLow "
     "Decrease")
 opt_model.printAttr(['X', 'RC', 'Obj', 'SAObjUp', 'SAObjLow'])
 
