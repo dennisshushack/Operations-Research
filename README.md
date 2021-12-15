@@ -5,3 +5,5 @@ Programs for solving Operation Research optimization problems
 * scipy: `pip install scipy`
 * numpy: `pip install numpy`
 
+## Setup
+Create a venv and activate it in Windows with `.\venv\Scripts\activate`
